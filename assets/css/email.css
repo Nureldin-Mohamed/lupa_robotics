@@ -1,0 +1,79 @@
+/* 整体隐藏 Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1000;
+}
+
+/* 半透明遮罩 */
+.modal-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 弹窗白色主体，居中显示 */
+.modal-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+/* 头部：标题 + 关闭按钮 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.modal-close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 主体：表单区 */
+.modal-body {
+  padding: 1rem;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 底部：发送按钮 */
+.modal-footer {
+  padding: 1rem;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+.modal-footer .btn {
+  padding: 0.5rem 1rem;
+}
+
+/* 当你想让页面文字不可选或滚动时，再加上下面两行 */
+/*
+html.modal-open {
+  overflow: hidden;
+}
+*/
